@@ -13,6 +13,10 @@ app.config(function($routeProvider) {
     .otherwise({redirectTo: '/'}); 
 });
 
+// The code below is heavily inspired by Witold Szczerba's plugin for AngularJS. I have modified the code in order
+// to reduce its complexity and make for easier explanation to novice JS developers. You can find his plugin here:
+// https://github.com/witoldsz/angular-http-auth
+
 app.config(function($httpProvider) {
   $httpProvider.interceptors.push(function($rootScope, $location, $q) {
     return {
