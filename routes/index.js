@@ -79,7 +79,7 @@ var smsify = function(str) {
 , login = exports.login = function(req, res) {
     sessions.login(req.body.username, req.body.password, function(err, cookie) {
       if (err) {
-        res.send(401, JSON.stringify({error: true}));
+        res.json(401, {error: true});
       }
       else {
         res.cookie(cookie);
