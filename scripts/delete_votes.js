@@ -1,4 +1,4 @@
-var db = require('nano')(require('../config').couchdb.url);
+var db = require('nano')(require('../config').couchdb.secureUrl);
 
 var docsToDelete = [];
 var event_id = process.argv[2];
